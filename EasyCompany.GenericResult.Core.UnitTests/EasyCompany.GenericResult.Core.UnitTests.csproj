@@ -15,7 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\EasyCompany.GenericResult.Core\EasyCompany.GenericResult.Core.csproj" />
+	  <ProjectReference Include="..\src\EasyCompany.GenericResult.Core\EasyCompany.GenericResult.Core.csproj" />
 	</ItemGroup>
 
 </Project>

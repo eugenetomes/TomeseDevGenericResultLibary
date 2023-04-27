@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+	<PackageId>EasyCompany.GenericResult</PackageId>
+	<Title>EasyCompany.GenericResult</Title>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Authors>Eugene Tomes</Authors>
+	<Company>TomesDev</Company>
+	<PackageProjectUrl>https://github.com/eugenetomes/TomeseDevGenericResultLibary</PackageProjectUrl>
+	<Description>A Package that have a generic Result Object that can be shared between projects.</Description>
+	<Summary>Generic Result Object.</Summary>
+	<RepositoryUrl>https://github.com/eugenetomes/TomeseDevGenericResultLibary</RepositoryUrl>
+	<PackageTags>aspnet asp.net aspnetcore asp.net core genericresult</PackageTags>
+	<PackageReleaseNotes>Initial Result Class</PackageReleaseNotes>
+	<Version>1.0.2</Version>
+	<AssemblyName>EasyCompany.GenericResult.Core</AssemblyName>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+	<LangVersion>10.0</LangVersion>
+	<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
