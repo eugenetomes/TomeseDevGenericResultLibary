@@ -10,10 +10,10 @@
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <Authors>Eugene Tomes</Authors>
 	  <Company>TomesDev</Company>
-	  <PackageProjectUrl>https://github.com/eugenetomes/TomeseDevGenericResult</PackageProjectUrl>
+	  <PackageProjectUrl>https://github.com/eugenetomes/TomeseDevGenericResultLibary</PackageProjectUrl>
 	  <Description>A Package that have a generic Result Object that can be shared between projects.</Description>
 	  <Summary>Generic Result Object.</Summary>
-	  <RepositoryUrl>https://github.com/eugenetomes/TomeseDevGenericResult</RepositoryUrl>
+	  <RepositoryUrl>https://github.com/eugenetomes/TomeseDevGenericResultLibary</RepositoryUrl>
 	  <PackageTags>aspnet asp.net aspnetcore asp.net core genericresult</PackageTags>
 	  <PackageReleaseNotes>Initial Result Class</PackageReleaseNotes>
 	  <Version>1.0.0</Version>

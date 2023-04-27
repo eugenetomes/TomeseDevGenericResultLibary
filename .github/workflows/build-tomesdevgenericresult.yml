@@ -23,8 +23,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Install dependencies
-      run: dotnet restore EasyCompany.GenericResult.sln
+      run: dotnet restore EasyCompanyGenericResult.sln
     - name: Build
-      run: dotnet build --configuration Release --no-restore EasyCompany.GenericResult.sln
+      run: dotnet build --configuration Release --no-restore EasyCompanyGenericResult.sln
     - name: Test
-      run: dotnet test --no-restore --verbosity normal EasyCompany.GenericResult.sln
+      run: dotnet test --no-restore --verbosity normal EasyCompanyGenericResult.sln
