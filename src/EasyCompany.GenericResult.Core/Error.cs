@@ -1,58 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace EasyCompany.GenericResult.Core;
 
-namespace EasyCompany.GenericResult.Core;
-
-public class Error : IEquatable<Error>
+public record Error
 {
-    public static readonly Error None = new(string.Empty, string.Empty);
-    public static readonly Error NullValue = new("Error.NullValue", "The specified result value is null.");
+    public static readonly Error None = new(string.Empty, string.Empty, ErrorType.Failure);
+    public static readonly Error NullValue = new("General.Null", "Null value was provided", ErrorType.Failure);
 
-    public Error(string code, string message)
+    public Error(string code, string message, ErrorType type)
     {
         Code = code;
         Message = message;
+        Type = type;
     }
 
     public string Code { get; }
 
     public string Message { get; }
 
-    public static implicit operator string(Error error) => error.Code;
+    public ErrorType Type { get; }
 
-    public static bool operator ==(Error? a, Error? b)
-    {
-        if (a is null && b is null)
-        {
-            return true;
-        }
+    public static Error Failure(string code, string message) => new(code, message, ErrorType.Failure);
 
-        if (a is null || b is null)
-        {
-            return false;
-        }
+    public static Error NotFound(string code, string message) => new(code, message, ErrorType.NotFound);
 
-        return a.Equals(b);
-    }
+    public static Error Problem(string code, string message) => new(code, message, ErrorType.Problem);
 
-    public static bool operator !=(Error? a, Error? b) => !(a == b);
+    public static Error Conflict(string code, string message) => new(code, message, ErrorType.Conflict);
 
-    public virtual bool Equals(Error? other)
-    {
-        if (other is null)
-        {
-            return false;
-        }
-
-        return Code == other.Code && Message == other.Message;
-    }
-
-    public override bool Equals(object? obj) => obj is Error error && Equals(error);
-
-    public override int GetHashCode() => HashCode.Combine(Code, Message);
-
-    public override string ToString() => Code;
+    public static Error Exception(Exception exception) => new("Exception", exception.Message, ErrorType.Exception);
 }
