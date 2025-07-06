@@ -17,11 +17,16 @@ public record Error
         Type = ErrorType.Failure;
     }
 
-    public string Code { get; }
+    private Error()
+    {
+        // This constructor is for serialization purposes only.
+    }
 
-    public string Message { get; }
+    public string Code { get; init; } = string.Empty;
 
-    public ErrorType Type { get; }
+    public string Message { get; init; } = string.Empty;
+
+    public ErrorType Type { get; init; } = default;
 
     public static readonly Error None = new(string.Empty, string.Empty, ErrorType.Failure);
     public static readonly Error NullValue = new("General.Null", "Null value was provided", ErrorType.Failure);
