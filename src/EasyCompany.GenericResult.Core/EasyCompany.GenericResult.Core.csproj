@@ -16,7 +16,7 @@
 	<RepositoryUrl>https://github.com/eugenetomes/TomeseDevGenericResultLibary</RepositoryUrl>
 	<PackageTags>aspnet asp.net aspnetcore asp.net core genericresult</PackageTags>
 	<PackageReleaseNotes>Initial Result Class</PackageReleaseNotes>
-	<Version>1.0.6</Version>
+	<Version>1.0.7</Version>
 	<AssemblyName>EasyCompany.GenericResult.Core</AssemblyName>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<EmbedUntrackedSources>true</EmbedUntrackedSources>

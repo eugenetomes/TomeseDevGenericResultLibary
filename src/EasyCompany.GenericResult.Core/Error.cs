@@ -9,14 +9,6 @@ public record Error
         Type = type;
     }
 
-    [Obsolete("Constructor will be depreciated in the next version")]
-    public Error(string code, string message)
-    {
-        Code = code;
-        Message = message;
-        Type = ErrorType.Failure;
-    }
-
     private Error()
     {
         // This constructor is for serialization purposes only.
