@@ -33,6 +33,17 @@ public class IntegrationError
     {
         return new IntegrationError("https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1", 500, "An unexpected error occurred", exception.Message, string.Empty, new List<Error>());
     }
+
+    public static IntegrationError Unauthorized(string detail)
+    {
+        return new IntegrationError("https://datatracker.ietf.org/doc/html/rfc7235#section-3.1", 401, "Unauthorized", detail, string.Empty, new List<Error>());
+    }
+
+    public static IntegrationError Error(Error error)
+    {
+        return new IntegrationError(error.Type.GetErrorType(), error.Type.GetStatusCode(), error.GetTitle(), error.GetDetail(), string.Empty, new List<Error>());
+    }
+
     public static readonly IntegrationError None = new(string.Empty, 200, string.Empty, string.Empty, string.Empty, new List<Error>());
     public static readonly IntegrationError NullValue = new("General.Null", 0, "Null value was provided", string.Empty, string.Empty, new List<Error>());
 }
