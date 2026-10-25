@@ -90,6 +90,18 @@ internal class ErrorTests
         error.Type.ShouldBe(ErrorType.Failure);
     }
 
+    [Test]
+    public void ValidationError_ShouldPass_WhenValidationIsCalled()
+    {
+        var code = "myCode";
+        var message = "myMessage";
+
+        var error = Error.Validation(code, message);
+
+        error.Code.ShouldBe(code);
+        error.Message.ShouldBe(message);
+        error.Type.ShouldBe(ErrorType.Validation);
+    }
 
     [Test]
     public void NotFoundError_ShouldPassed_WhenNotFoundIsCalled()

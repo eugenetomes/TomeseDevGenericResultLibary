@@ -28,5 +28,6 @@ public record Error
     public static Error Conflict(string code, string message) => new(code, message, ErrorType.Conflict);
     public static Error Exception(Exception exception) => new("Exception", exception.Message, ErrorType.Exception);
     public static Error Forbidden(string code, string message) => new(code, message, ErrorType.Forbidden);
+    public static Error Validation(string code, string message) => new(code, message, ErrorType.Validation);
 
 }
